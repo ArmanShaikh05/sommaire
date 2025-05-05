@@ -70,3 +70,6 @@ Arman Ajijul Shaikh is combining tech skills with social impact for a brighter f
 
 # Bottom Line
 - 🌟 Arman is a multi-talented individual ready to make a significant impact in the IT industry!`;
+
+
+export const ORIGIN_URL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : ""
