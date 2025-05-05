@@ -1,11 +1,10 @@
+import Header from "@/components/common/Header";
+import { Toaster } from "@/components/ui/sonner";
+import { ORIGIN_URL } from "@/lib/constants";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Source_Sans_3 as FontSans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
-import { ClerkProvider } from "@clerk/nextjs";
-import { Toaster } from "@/components/ui/sonner";
-import { ORIGIN_URL } from "@/lib/constants";
 
 const fontSans = FontSans({
   variable: "--font-sans",
@@ -18,9 +17,9 @@ export const metadata: Metadata = {
   description: "Sommaire is an app for generating summary of pdf",
   keywords: "Sommaire, pdf, summary, app",
   metadataBase: new URL(ORIGIN_URL),
-  alternates:{
-    canonical:ORIGIN_URL
-  }
+  alternates: {
+    canonical: ORIGIN_URL,
+  },
 };
 
 export default function RootLayout({
@@ -35,7 +34,7 @@ export default function RootLayout({
           <div className="relative flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">{children}</main>
-            <Footer />
+
             <Toaster position="top-right" />
           </div>
         </body>
